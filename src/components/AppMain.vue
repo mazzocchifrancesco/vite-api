@@ -11,6 +11,12 @@ export default {
 }
 </script>
 <template>
-    <AppCard />
+    <div id="main" class="p-5">
+        <AppCard />
+    </div>
 </template>
-<style scoped></style>
+<style scoped>
+#main {
+    background-color: rgb(232, 204, 170);
+}
+</style>
