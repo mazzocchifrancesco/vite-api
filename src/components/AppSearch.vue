@@ -16,7 +16,7 @@ export default {
             if (this.database.searchString != "") {
 
                 this.database.birreria == [],
-                    axios.get(`https://api.openbrewerydb.org/v1/breweries?by_type=${this.database.searchString}&per_page=3`).then(risultato => {
+                    axios.get(`https://api.openbrewerydb.org/v1/breweries?by_country=ireland&by_city=${this.database.searchString}&per_page=6`).then(risultato => {
                         this.database.birreria = risultato.data;
                         console.log(this.database.birreria);
                     });
@@ -27,8 +27,6 @@ export default {
                     console.log(this.database.birreria);
                 });
             }
-
-
 
 
         }
@@ -43,7 +41,7 @@ export default {
 
         <p>CERCA LA BIRRERIA</p>
         <div>
-            <input placeholder="Inserisci un tipo di birreria" v-model="database.searchString" class="me-3">
+            <input placeholder="Inserisci una città" v-model="database.searchString" class="me-3">
             <button @click="search">Cerca</button>
         </div>
 
