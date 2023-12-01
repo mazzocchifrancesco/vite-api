@@ -1,5 +1,5 @@
 <script>
-import { database } from "./database.js"
+import { database } from "../database.js"
 import axios from 'axios';
 
 export default {
@@ -25,6 +25,7 @@ export default {
         }
     }
 }
+
 </script>
 <template>
     <div class="container">
